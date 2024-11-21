@@ -102,7 +102,12 @@ class GraphSolver {
     this.startVertex = graph[0].from;
     if (settings.majorDistribution == MajorDistributionMode.Chozo) {
       this.graph.forEach(n => {
-        if (n.from.progression === 0 && n.from.type == "minor") {
+        if (
+          n.from.progression === 0 &&
+          n.from.type == "minor" &&
+          n.from.name !== "Missiles (Beta)" &&
+          n.from.name !== "Energy Tank (Brinstar Ceiling)"
+        ) {
           n.from.progression = -1;
         }
       });

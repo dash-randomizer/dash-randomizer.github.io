@@ -218,13 +218,14 @@ export const cloneGraph = (graph: Graph): Graph => {
 const getEdgeUpdates = (
   mapLayout: number,
   areaShuffle: boolean,
-  majorDistributionMode: number
+  _: number
+  //majorDistributionMode: number
 ): EdgeUpdate[] => {
 
-  const majorModeEdgeUpdates: EdgeUpdate[] =
-    majorDistributionMode === MajorDistributionMode.Chozo
-      ? ChozoEdgeUpdates
-      : [];
+  const majorModeEdgeUpdates: EdgeUpdate[] = [];
+    //majorDistributionMode === MajorDistributionMode.Chozo
+      //? ChozoEdgeUpdates
+      //: [];
 
   switch (mapLayout) {
     case MapLayout.Standard:
